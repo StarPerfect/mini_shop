@@ -19,7 +19,9 @@ class ItemsController < ApplicationController
   end
 
   def create
-    binding.pry
+    @merchant - Merchant.find(params[:id])
+    Item.create(item_params)
+    redirect_to "/merchants/#{@merchant.id}/items"
   end
 
   def edit

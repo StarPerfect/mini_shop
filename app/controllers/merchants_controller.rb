@@ -14,6 +14,7 @@ class MerchantsController < ApplicationController
       state: params[:state],
       zip: params[:zip],
       })
+      # Merchant.create(merchant_params) - don't have to do both save and new
       merchant.save
       redirect_to '/merchants'
   end

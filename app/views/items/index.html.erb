@@ -1,5 +1,8 @@
 <p><%= link_to 'Merchants Index', '/merchants' %></p>
 <center><h2>Items</h2>
+  <% if @merchant %>
+  <%= link_to 'Add New Item', "/merchants/#{@merchant.id}/items/new" %>
+  <% end %>
 <% @items.each do |item| %>
   <h2><%= link_to item.name, "/items/#{item.id}" %></h2>
   <p><%= item.description %></p>

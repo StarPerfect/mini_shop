@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+.topnav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: magenta;
+}
